@@ -1,0 +1,11 @@
+.showCounter {
+    display: flex;
+    align-items: center;
+}
+.endText {
+}
+
+.timeWrapper {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,19 @@
+.countdown {
+    width: 70px;
+    margin: 8px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.countdown p {
+    font-size: 25px;
+    font-weight: 600;
+}
+.countdown span {
+    font-size: 15px;
+}

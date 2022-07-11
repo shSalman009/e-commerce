@@ -1,0 +1,108 @@
+.main {
+    position: relative;
+}
+.imgwrapper {
+    height: 67%;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+.main span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: tomato;
+    padding: 4px 12px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #fff;
+    border-radius: 2px;
+    z-index: 1;
+}
+.imgwrapper img {
+    max-width: 100%;
+}
+.content {
+    width: 100%;
+
+    background-color: #eeeeee;
+    height: 33%;
+}
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px 0px;
+}
+.details h4 {
+    font-size: 17px;
+}
+.details p {
+    font-weight: 300;
+    width: 100%;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    color: #111;
+    margin: 0;
+}
+
+.addCart {
+    position: absolute;
+    bottom: 25px;
+    width: 150px;
+    left: calc(50% - 75px);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+.addCart > div {
+    max-width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #111;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    opacity: 0;
+    transition: 0.5s;
+}
+.addCart > div:nth-child(1) {
+    transform: rotate(180deg);
+    right: 30px;
+}
+.addCart > div:nth-child(2) {
+    transform: rotateX(90deg);
+    top: 30px;
+}
+.addCart > div:nth-child(3) {
+    transform: rotate(-180deg);
+    left: 30px;
+}
+
+/* Hover */
+
+.imgwrapper:hover .addCart {
+    transform: scaleY(1);
+}
+.imgwrapper:hover .addCart > div:nth-child(1) {
+    transform: rotate(0deg);
+    right: 0px;
+    opacity: 1;
+}
+.imgwrapper:hover .addCart > div:nth-child(2) {
+    top: 0px;
+    transform: rotateX(0deg);
+
+    opacity: 1;
+}
+.imgwrapper:hover .addCart > div:nth-child(3) {
+    transform: rotate(0deg);
+    left: 0px;
+    opacity: 1;
+}

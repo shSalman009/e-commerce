@@ -1,0 +1,110 @@
+.item {
+    width: 280px;
+    height: 380px;
+}
+.imgWrapper {
+    width: 100%;
+    height: 280px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+.imgWrapper img {
+    max-width: 100%;
+    transition: 0.4s;
+}
+.imgWrapper span {
+    position: absolute;
+    display: block;
+    background: tomato;
+    color: #fff;
+    font-size: 15px;
+    padding: 3px 10px;
+    left: 10px;
+    top: 10px;
+    border-radius: 2px;
+    z-index: 1;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    gap: 10px;
+}
+.content .title {
+    width: 100%;
+}
+.content .title p {
+    font-weight: 300;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    color: #555;
+    margin: 0;
+}
+.content h4 {
+    font-size: 17px;
+}
+
+.effect {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    background: gray;
+    color: #333;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 1;
+}
+.effect div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.effect div img {
+    filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg)
+        brightness(119%) contrast(115%);
+    cursor: pointer;
+}
+.effect button {
+    padding: 8px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.imgWrapper::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+/* Hover  */
+
+.imgWrapper:hover .effect {
+    transform: scaleY(1);
+    opacity: 1;
+}
+.imgWrapper:hover::after {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.imgWrapper:hover img {
+    transform: scale(1.1);
+}

@@ -1,0 +1,36 @@
+.summery {
+}
+.summery > h4 {
+    font-size: 30px;
+}
+
+.orders {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.order > div {
+    text-align: left;
+}
+.order > div p {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.order > div span {
+    font-size: 15px;
+    color: #444;
+}
+.order h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+}

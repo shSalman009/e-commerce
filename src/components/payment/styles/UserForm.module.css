@@ -1,0 +1,33 @@
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.form div:last-child {
+    grid-column: 1/-1;
+}
+
+.form > div {
+    height: 80px;
+}
+
+.form > div p {
+    font-size: 18px;
+    line-height: 30px;
+    color: red;
+    text-align: left;
+    font-weight: 300;
+}
+.form > select {
+    height: 50px;
+    font-size: 18px;
+}
+.form > select option {
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

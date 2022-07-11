@@ -1,0 +1,42 @@
+.main {
+    text-align: center;
+}
+.main h2 {
+    font-size: 40px;
+    color: #333;
+    margin: 20px 0px;
+}
+
+.header {
+    margin: 50px 0px;
+}
+.header p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #444;
+    letter-spacing: 1px;
+}
+.saleDetails {
+    margin: 20px 0px;
+    padding: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.saleDetails button {
+    padding: 8px 20px;
+    font-size: 17px;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+}
+
+.itemsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 40px;
+}

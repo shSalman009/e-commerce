@@ -1,0 +1,88 @@
+.categories {
+    padding: 50px 0px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: auto;
+}
+
+.main {
+    display: flex;
+    gap: 30px;
+}
+.item {
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 3px;
+}
+.item h4 {
+    font-size: 27px;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #00000061;
+    border-radius: 2px;
+    padding: 10px;
+    transition: visibility 0.3s;
+}
+.item p {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #111;
+    background: #ffffff80;
+    margin: 40px;
+    transition: 0.4s;
+    animation-name: myanim;
+    animation-duration: 5 s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.item button {
+    padding: 8px 20px;
+    font-size: 17px;
+    font-weight: 600;
+    background: #fff;
+    cursor: pointer;
+    color: #111;
+    display: none;
+}
+.item img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    transition: 0.3s;
+}
+
+/* Hover */
+.item:hover img {
+    transform: scale(1.1);
+}
+/* .item:hover h4 {
+    opacity: 0;
+    visibility: hidden;
+} */
+
+/* .slide-fwd-center {
+	animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+} */
+@keyframes myanim {
+    0% {
+        transform: translateZ(0);
+    }
+    100% {
+        transform: translateZ(160px);
+    }
+}

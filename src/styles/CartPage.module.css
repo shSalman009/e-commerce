@@ -1,0 +1,32 @@
+.cartItem {
+    padding-top: 170px;
+}
+
+.main {
+    display: flex;
+}
+
+.cartItems {
+    width: 70%;
+    border-right: 1px solid rgba(68, 68, 68, 0.342);
+    padding: 20px;
+}
+.cartItems > h3 {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 20px 0px;
+}
+
+.updateButton {
+    padding: 20px 0px;
+    text-align: right;
+}
+.notFound {
+}
+.notFound h4 {
+    margin: 50px 0px;
+    font-size: 50px;
+    color: #11111178;
+}
+
+/* Hover */
