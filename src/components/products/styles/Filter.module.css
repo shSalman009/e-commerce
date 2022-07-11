@@ -1,0 +1,29 @@
+.main {
+    font-size: 19px;
+    text-transform: capitalize;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px;
+}
+
+.filter {
+}
+.filter ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    user-select: none;
+}
+.filter ul li {
+    padding: 5px 0px;
+    width: 100px;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.active {
+    background-color: green;
+}
