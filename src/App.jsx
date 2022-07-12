@@ -1,4 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Alerts from "./components/Alerts";
 import Checkout from "./components/payment/Checkout";
 import GetProducts from "./lib/GetProducts";
 import CartItemPage from "./pages/CartItemPage";
@@ -10,6 +11,7 @@ export default function App() {
         <>
             <BrowserRouter>
                 <GetProducts>
+                    <Alerts />
                     <Routes>
                         <Route path="/" element={<Navigate to="/home" />} />
                         <Route path="/home" element={<Home />} />

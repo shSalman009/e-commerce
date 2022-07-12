@@ -18,7 +18,7 @@ export default function NewProduct({ products }) {
                 </p>
                 <div className={style.products}>
                     {items.map((item) => (
-                        <NewItem isNew={true} key={item.id} item={item} />
+                        <NewItem key={item.id} item={item} />
                     ))}
                 </div>
             </div>

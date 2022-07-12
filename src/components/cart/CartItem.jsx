@@ -13,7 +13,7 @@ export default function CartItem({ item }) {
                         removeSingleCart(item);
                     }}
                 >
-                    <MdDeleteForever />
+                    <MdDeleteForever size={20} />
                 </button>
             </div>
             <div className={styles.imgWrapper}>
