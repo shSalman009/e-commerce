@@ -11,7 +11,6 @@ import style from "../styles/SingleItem.module.css";
 
 export default function SingleItem() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-    const [currentImg, setCurrentImg] = useState(0);
     const [backgroundPosition, setBackgroundPosition] = useState("0% 0%");
 
     const [cartItem, setCartItem] = useState(0);
@@ -51,10 +50,6 @@ export default function SingleItem() {
         }
     };
 
-    const handleImgClick = (index) => {
-        setCurrentImg(index);
-    };
-
     const handleMouseMove = (e) => {
         const { left, top, width, height } = e.target.getBoundingClientRect();
         const x = ((e.pageX - left) / width) * 100;
@@ -75,11 +70,24 @@ export default function SingleItem() {
                     modules={[FreeMode, Thumbs]}
                     className="mySwiper2"
                 >
-                    {item.img.map((e, i) => (
-                        <SwiperSlide key={i}>
-                            <img src={e} alt="" />
-                        </SwiperSlide>
-                    ))}
+                    {item.img.map((e, i) => {
+                        return (
+                            <SwiperSlide key={i}>
+                                <div
+                                    onMouseMove={(e) => {
+                                        handleMouseMove(e);
+                                    }}
+                                    style={{
+                                        backgroundImage: `url(${e})`,
+                                        backgroundPosition,
+                                    }}
+                                    className={style.mainImg}
+                                >
+                                    <img src={e} alt="" />
+                                </div>
+                            </SwiperSlide>
+                        );
+                    })}
                 </Swiper>
                 <Swiper
                     onSwiper={setThumbsSwiper}
@@ -91,7 +99,7 @@ export default function SingleItem() {
                     className="mySwiper"
                 >
                     {item.img.map((e, i) => (
-                        <SwiperSlide key={i}>
+                        <SwiperSlide key={i} style={{ cursor: "pointer" }}>
                             <img src={e} alt="" />
                         </SwiperSlide>
                     ))}
@@ -135,9 +143,7 @@ export default function SingleItem() {
                         <button onClick={handleIncrement}>+</button>
                     </div>
                     <button
-                        className={
-                            cartItem <= 0 ? style.disableButton : undefined
-                        }
+                        className={cartItem <= 0 ? "disableButton" : "btn"}
                         onClick={() => {
                             handleAddCart(item, cartItem);
                             setCartItem(0);

@@ -120,9 +120,11 @@ export default function ShippingForm({ next }) {
                 />
 
                 <FormInputs
-                    placeholder="city"
-                    name="city"
+                    placeholder="City"
                     type="text"
+                    name="city"
+                    value={formik.values.city}
+                    onChange={formik.handleChange}
                     feedback={
                         formik.errors.city && formik.touched.city
                             ? formik.errors.city

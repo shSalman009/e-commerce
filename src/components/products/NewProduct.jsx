@@ -5,20 +5,6 @@ import style from "./styles/NewProduct.module.css";
 export default function NewProduct({ products }) {
     const [items, setItems] = useState([]);
 
-    const categories = ["all", "t-shirt", "jeans", "dress", "shoes", "watch"];
-
-    const handleCategory = (category) => {
-        setItems([]);
-        products.forEach((product) => {
-            if (product.type === category) {
-                setItems((prev) => [...prev, product]);
-            }
-            if (category === "all") {
-                setItems(products);
-            }
-        });
-    };
-
     useEffect(() => {
         setItems(products);
     }, [products]);

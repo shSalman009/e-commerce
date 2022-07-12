@@ -5,7 +5,6 @@ export default function SingleItemPage() {
     return (
         <>
             <Topbar />
-
             <SingleItem />
         </>
     );

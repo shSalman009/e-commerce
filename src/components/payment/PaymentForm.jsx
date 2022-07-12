@@ -1,9 +1,12 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./styles/PaymentForm.module.css";
 
 export default function PaymentForm({ total, handleClearCart }) {
     const [success, setSuccess] = useState(false);
+
+    const navigate = useNavigate();
 
     const stripe = useStripe();
     const elements = useElements();
@@ -64,8 +67,16 @@ export default function PaymentForm({ total, handleClearCart }) {
                     </div>
                 </form>
             ) : (
-                <div>
+                <div className={styles.success}>
                     <h2>BUY SUCCESSFULLY DONE</h2>
+                    <button
+                        onClick={() => {
+                            navigate("/");
+                        }}
+                        className="btn"
+                    >
+                        Go Back Home
+                    </button>
                 </div>
             )}
         </div>

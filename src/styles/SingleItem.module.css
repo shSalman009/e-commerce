@@ -3,34 +3,12 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
-    padding-top: 150px;
+    padding-top: 50px;
+    margin-top: 170px;
 }
 .left {
     width: 40%;
 }
-/* .mainImg {
-    width: 555px;
-    height: 555px;
-    background-repeat: no-repeat;
-}
-.mainImg img {
-    max-width: 100%;
-}
-
-.allImg {
-    display: flex;
-    gap: 15px;
-}
-.allImg div {
-    width: 150px;
-    height: 150px;
-    border-radius: 2px;
-    margin: 15px 0px;
-    overflow: hidden;
-}
-.allImg div img {
-    max-width: 100%;
-} */
 
 .right {
     width: 50%;
@@ -94,8 +72,6 @@
     gap: 10px;
 }
 .sizes div div {
-    width: 30px;
-    height: 30px;
     font-size: 18px;
     border: 1px solid #777777;
     display: flex;
@@ -104,6 +80,7 @@
     font-weight: 300;
     color: #111;
     cursor: pointer;
+    padding: 5px 10px;
 }
 
 .addToCart {
@@ -124,19 +101,19 @@
     transition: 0.3s;
     cursor: pointer;
 }
-.addToCart > button {
-    font-size: 15px;
-    text-transform: uppercase;
-    padding: 10px 28px;
-    background: tomato;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
 
-.disableButton {
-    background-color: rgba(255, 99, 71, 0.438) !important;
-    cursor: not-allowed !important;
+.mainImg {
+    background-position: 50% 50%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+.mainImg img {
+    transition: opacity 0.5s;
+    display: block;
+    width: 100%;
 }
 
 /* Hover */

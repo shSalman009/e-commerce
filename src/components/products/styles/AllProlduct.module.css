@@ -21,3 +21,13 @@
     grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
     gap: 20px;
 }
+.empty {
+    grid-column: 1/-1;
+    text-align: center;
+    margin: 50px 0px;
+}
+.empty p {
+    font-size: 32px;
+    color: #444;
+    text-transform: uppercase;
+}

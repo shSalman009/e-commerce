@@ -1,6 +1,6 @@
-import x from "../images/X.png";
-import { useProducts } from "../lib/GetProducts";
-import styles from "../styles/CartItem.module.css";
+import { MdDeleteForever } from "react-icons/md";
+import { useProducts } from "../../lib/GetProducts";
+import styles from "./styles/CartItem.module.css";
 
 export default function CartItem({ item }) {
     const { handleAddCart, handleRemoveCart, removeSingleCart } = useProducts();
@@ -13,7 +13,7 @@ export default function CartItem({ item }) {
                         removeSingleCart(item);
                     }}
                 >
-                    <img src={x} alt="" />
+                    <MdDeleteForever />
                 </button>
             </div>
             <div className={styles.imgWrapper}>

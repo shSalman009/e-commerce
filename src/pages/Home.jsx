@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Categories from "../components/Categories";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import AllProducts from "../components/products/AllProducts";
 import Flashsale from "../components/products/Flashsale";
 import NewProduct from "../components/products/NewProduct";
@@ -43,6 +45,8 @@ export default function Home() {
                 <Flashsale discountProducts={discountProducts} />
                 <NewProduct products={newCollectionProducts} />
                 <AllProducts products={products} />
+                <Contact />
+                <Footer />
             </div>
         </>
     );

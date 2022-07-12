@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import ALLProductItem from "./AllProductItem";
 import Filter from "./Filter";
@@ -15,13 +15,12 @@ export default function AllProducts({ products }) {
     const handleFilter = (value) => {
         setCategory(value);
     };
-    console.log(product);
 
     useEffect(() => {
         const filtering = () => {
             setProduct([]);
             products.forEach((p) => {
-                if (gender === "all") {
+                if (gender === p.gender) {
                     if (category === "all") {
                         setProduct((prev) => [...prev, p]);
                     }
@@ -29,11 +28,11 @@ export default function AllProducts({ products }) {
                         setProduct((prev) => [...prev, p]);
                     }
                 }
-                if (gender === p.gender) {
-                    if (category === "all") {
+                if (gender === "all") {
+                    if (p.type === category) {
                         setProduct((prev) => [...prev, p]);
                     }
-                    if (p.type === category) {
+                    if (category === "all") {
                         setProduct((prev) => [...prev, p]);
                     }
                 }
@@ -58,13 +57,19 @@ export default function AllProducts({ products }) {
                     gender={gender}
                     category={category}
                 />
-                <motion.div layout className={styles.products}>
-                    <AnimatePresence>
-                        {product.map((item) => (
-                            <ALLProductItem key={item.id} item={item} />
-                        ))}
-                    </AnimatePresence>
-                </motion.div>
+                <div className={styles.products}>
+                    {product && product.length > 0 ? (
+                        <AnimatePresence>
+                            {product.map((item) => (
+                                <ALLProductItem key={item.id} item={item} />
+                            ))}
+                        </AnimatePresence>
+                    ) : (
+                        <div className={styles.empty}>
+                            <p>This product is not availible</p>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );

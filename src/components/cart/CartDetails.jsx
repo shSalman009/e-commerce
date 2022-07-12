@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
-import styles from "../styles/CartDetails.module.css";
+import { useNavigate } from "react-router-dom";
+import styles from "./styles/CartDetails.module.css";
 
 export default function CartDetails({ totalPrice, cartItems }) {
+    const navigate = useNavigate();
+
     return (
         <div className={styles.details}>
             <div className={styles.detailsHead}>
@@ -34,9 +36,17 @@ export default function CartDetails({ totalPrice, cartItems }) {
                 <h4>${totalPrice}.00</h4>
             </div>
             <div className={styles.subButton}>
-                <Link to="/checkout" state={{ cartItems }}>
-                    <button className="btn">Procced to Checkout</button>
-                </Link>
+                <button
+                    onClick={() => {
+                        navigate("/checkout", {
+                            state: { cartItems },
+                        });
+                    }}
+                    disabled={cartItems && cartItems.length > 0 ? false : true}
+                    className={cartItems <= 0 ? "disableButton" : "btn"}
+                >
+                    Procced to Checkout
+                </button>
             </div>
         </div>
     );

@@ -478,7 +478,7 @@ export const products = [
             "https://static-01.daraz.com.bd/p/8f6e71ce87b32686f3931a1fcd62433d.jpg",
         ],
         title: "Cotton Long Sleeve Formal Shirt For Men",
-        type: "jeans",
+        type: "pant",
         price: 80,
         gender: "male",
         size: ["M", "L", "XL", "XXL"],

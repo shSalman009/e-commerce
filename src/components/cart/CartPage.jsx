@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { useProducts } from "../lib/GetProducts";
-import styles from "../styles/CartPage.module.css";
+import { useProducts } from "../../lib/GetProducts";
 import CartDetails from "./CartDetails";
 import CartItem from "./CartItem";
+import styles from "./styles/CartPage.module.css";
 
 export default function CartPage() {
     const [totalPrice, setTotalPrice] = useState(0);
 
-    const { cartItems } = useProducts();
+    const { cartItems, handleClearCart } = useProducts();
 
     useEffect(() => {
         setTotalPrice(cartItems.reduce((a, b) => a + b.price * b.qty, 0));
@@ -31,7 +31,19 @@ export default function CartPage() {
                         )}
 
                         <div className={styles.updateButton}>
-                            <button className="btn">remove all</button>
+                            <button
+                                onClick={handleClearCart}
+                                disabled={
+                                    cartItems && cartItems.length > 0
+                                        ? false
+                                        : true
+                                }
+                                className={
+                                    cartItems <= 0 ? "disableButton" : "btn"
+                                }
+                            >
+                                remove all
+                            </button>
                         </div>
                     </div>
                     <CartDetails
