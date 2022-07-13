@@ -25,7 +25,7 @@ export const sliderItems = [
 export const categories = [
     {
         id: 1,
-        img: "https://cdn.shopify.com/s/files/1/0026/2910/7764/products/1938617800_1_1_1_6fdbc1b5-c9a4-49a1-9d66-4af6c6c3cc91_270x.progressive.jpg?v=1540482146",
+        img: "https://cdn.shopify.com/s/files/1/0421/6153/7180/files/banner-full3_720x.jpg?v=1606722878",
         title: "CLOTH STYLES!",
     },
     {
@@ -35,7 +35,7 @@ export const categories = [
     },
     {
         id: 3,
-        img: "https://cdn.shopify.com/s/files/1/0026/2910/7764/products/4913587800_1_1_1_270x.progressive.jpg?v=1525094040",
+        img: "https://cdn.shopify.com/s/files/1/0342/2686/4266/products/pr-watch7_360x.png?v=1616560919",
         title: "BRAND WATCH",
     },
 ];

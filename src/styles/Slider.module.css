@@ -39,3 +39,21 @@
     font-weight: 600;
     background: transparent;
 }
+
+/* Media Query */
+
+@media (max-width: 1400px) {
+    .main {
+        height: 450px;
+    }
+}
+@media (max-width: 1200px) {
+    .main {
+        height: 400px;
+    }
+}
+@media (max-width: 992px) {
+    .main {
+        height: 350px;
+    }
+}

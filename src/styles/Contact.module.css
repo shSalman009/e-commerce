@@ -48,4 +48,45 @@
     background: #333;
     color: #fff;
     font-size: 18px;
+    padding: 0px 10px;
+}
+.rightWrapper div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
+
+/* media query */
+
+@media (max-width: 1200px) {
+    .main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .main {
+        padding: 50px;
+    }
+    .rightWrapper {
+        width: auto;
+    }
+}
+@media (max-width: 500px) {
+    .main {
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .rightWrapper {
+        width: auto;
+    }
+}
+@media (max-width: 350px) {
+    .rightWrapper input {
+        width: 200px;
+    }
 }

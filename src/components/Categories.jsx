@@ -9,14 +9,7 @@ export default function Categories() {
                     {categories.map((item) => (
                         <div key={item.id} className={style.item}>
                             <img src={item.img} alt="" />
-                            {/* <h4>{item.title}</h4> */}
-                            {/* <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet sequi iusto sed esse
-                                cumque veniam quo? Repudiandae nisi nostrum
-                                similique!
-                            </p> */}
-                            <button>Shop Now</button>
+                            <div>{item.title}</div>
                         </div>
                     ))}
                 </div>

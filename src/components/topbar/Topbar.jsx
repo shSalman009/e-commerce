@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./styles/Topbar.module.css";
 import TopbarBottom from "./TopbarBottom";
+import TopbarMiddle from "./TopbarMiddle";
 import TopbarTop from "./TopbarTop";
 
 export default function Topbar() {
@@ -17,6 +18,7 @@ export default function Topbar() {
     return (
         <div className={`${styles.main} ${show ? styles.hidden : styles.show}`}>
             <TopbarTop />
+            <TopbarMiddle />
             <TopbarBottom />
         </div>
     );

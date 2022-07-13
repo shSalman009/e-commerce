@@ -5,11 +5,34 @@ import style from "./styles/Flashsales.module.css";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function Flashsale({ discountProducts }) {
+    const [resOne, setResOne] = useState(
+        window.matchMedia("(max-width: 1400px)").matches
+    );
+    const [resTwo, setResTwo] = useState(
+        window.matchMedia("(max-width: 992px)").matches
+    );
+    const [resThree, setResThree] = useState(
+        window.matchMedia("(max-width: 768px)").matches
+    );
+
+    useEffect(() => {
+        window
+            .matchMedia("(max-width: 1400px)")
+            .addEventListener("change", (e) => setResOne(e.matches));
+        window
+            .matchMedia("(max-width: 992px)")
+            .addEventListener("change", (e) => setResTwo(e.matches));
+        window
+            .matchMedia("(max-width: 768px)")
+            .addEventListener("change", (e) => setResThree(e.matches));
+    }, []);
+
     // end time
     const threeDaysTime = 3 * 24 * 60 * 60 * 1000;
     const presentTime = new Date().getTime();
@@ -35,8 +58,12 @@ export default function Flashsale({ discountProducts }) {
                     </div>
 
                     <Swiper
-                        slidesPerView={4}
-                        spaceBetween={40}
+                        slidesPerView={
+                            resThree ? 1 : resTwo ? 2 : resOne ? 3 : 4
+                        }
+                        spaceBetween={
+                            resThree ? 10 : resTwo ? 20 : resOne && 30
+                        }
                         navigation={true}
                         modules={[Navigation]}
                         className="mySwiper"

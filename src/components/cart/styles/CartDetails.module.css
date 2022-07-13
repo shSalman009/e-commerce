@@ -8,7 +8,7 @@
 }
 .detailsHead h3 {
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 600;
     margin: 20px 0px;
 }
 
@@ -61,4 +61,26 @@
 .subButton {
     border-top: 1px solid rgba(68, 68, 68, 0.342);
     padding: 20px 0px;
+}
+/* Media Query */
+
+@media (max-width: 1200px) {
+    .details {
+        padding: 0px;
+    }
+    .detailsHead {
+        text-align: center;
+    }
+    .subButton {
+        text-align: center;
+    }
+}
+@media (max-width: 992px) {
+    .details {
+        padding: 20px;
+        width: 100%;
+    }
+    .subButton {
+        text-align: right;
+    }
 }

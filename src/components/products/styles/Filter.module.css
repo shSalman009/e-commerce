@@ -27,3 +27,39 @@
 .active {
     background-color: green;
 }
+
+/* Media Query */
+
+@media (max-width: 1600px) {
+    .main {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0px;
+
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media (max-width: 576px) {
+    .filter ul {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 370px) {
+    .filter ul {
+        gap: 10px;
+    }
+    .filter ul li {
+        padding: 5px 0px;
+        width: 80px;
+    }
+}
+@media (max-width: 300px) {
+    .filter ul {
+        gap: 10px;
+    }
+    .filter ul li {
+        padding: 5px 0px;
+        width: 70px;
+    }
+}

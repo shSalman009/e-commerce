@@ -1,71 +1,64 @@
-.top {
-    width: 100%;
-    background: #fff;
+.topbarTop {
+    background-color: #ddd;
+    z-index: 1;
 }
+.none {
+    display: none;
+}
+.block {
+    display: block;
+}
+
 .main {
     display: flex;
-    padding: 20px 0px;
-}
-
-/* Logo */
-.logo {
-    flex: 3;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-.logo h4 {
-    font-size: 32px;
-    letter-spacing: 7px;
-}
-
-/* Search */
-.search {
-    flex: 6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.search div {
-    width: 500px;
-    height: 40px;
-    display: flex;
     justify-content: space-between;
-    border: 1px solid rgb(119, 119, 119);
+    align-items: center;
+    font-size: 15px;
+    position: relative;
 }
-
-.search div input {
-    flex: 9;
-    height: 100%;
-    padding: 0px 15px;
-    font-size: 18px;
-    color: #777777;
-    font-weight: 300;
-    border: none;
-    outline: none;
+.left {
 }
-.search div button {
-    flex: 3;
-    right: 0;
-    border: none;
-    height: 100%;
-    background: tomato;
-    color: #fff;
-    font-size: 18px;
+.left p {
 }
-
-/* Right */
 .right {
-    flex: 3 1;
     display: flex;
-    justify-content: right;
+    gap: 10px;
+}
+.right > div {
+    padding: 10px;
+}
+.language {
+    border-right: 1px solid #777;
+}
+.currency {
+    border-right: 1px solid #777;
+}
+.account {
+}
+
+.language,
+.currency {
+    position: relative;
+    display: flex;
+    gap: 5px;
     align-items: center;
 }
-.right button {
-    background: transparent;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.language ul,
+.currency ul {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    top: 110%;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 2px;
+    border-top: 3px solid tomato;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+.language ul li,
+.currency ul li {
+    padding: 10px 0px;
 }
