@@ -17,3 +17,26 @@
 .countdown span {
     font-size: 15px;
 }
+
+/* Media Query */
+
+@media (max-width: 768px) {
+    .countdown {
+        width: 50px;
+        height: 50px;
+        border: none;
+    }
+}
+@media (max-width: 576px) {
+    .countdown {
+        width: auto;
+    }
+    .countdown p {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .countdown span {
+        display: none;
+    }
+}

@@ -6,6 +6,7 @@ import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -54,16 +55,24 @@ export default function Flashsale({ discountProducts }) {
                     <div className={style.saleDetails}>
                         <CountdownTimer targetDate={dateTimeAfterThreeDays} />
 
-                        <button>Shop More</button>
+                        <button>
+                            <Link
+                                activeClass="active"
+                                to="shop"
+                                spy={true}
+                                smooth={true}
+                                duration={500}
+                            >
+                                Shop More
+                            </Link>
+                        </button>
                     </div>
 
                     <Swiper
                         slidesPerView={
                             resThree ? 1 : resTwo ? 2 : resOne ? 3 : 4
                         }
-                        spaceBetween={
-                            resThree ? 10 : resTwo ? 20 : resOne && 30
-                        }
+                        spaceBetween={30}
                         navigation={true}
                         modules={[Navigation]}
                         className="mySwiper"

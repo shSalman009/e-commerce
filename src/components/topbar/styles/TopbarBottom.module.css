@@ -1,75 +1,90 @@
-.none {
-    display: none !important;
-}
-.block {
-    display: block;
-}
-.navbar {
+.topbarBottom {
+    width: 100%;
     background: #fff;
 }
+
 .main {
+    display: grid;
+    padding: 20px 0px;
+    row-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Logo */
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.logo h4 {
+    font-size: 32px;
+    letter-spacing: 7px;
+}
+
+/* Search */
+.search {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 0px;
+}
+
+/* Right */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
     gap: 20px;
 }
-
-/* left */
-.nav {
+.right div {
+    border: none;
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-.nav > ul {
-    display: flex;
-    list-style: none;
-    gap: 10px;
-}
-.nav > ul > li {
-    position: relative;
-    font-size: 20px;
-    color: #333;
-    display: flex;
-    align-items: center;
-}
-.nav > ul > li > a {
-    padding: 5px 10px;
-    color: #111;
     cursor: pointer;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: transparent;
 }
-
-.smallDevice {
+.right div span {
+    position: absolute;
+    font-size: 17px;
+    top: -9px;
+    right: -8px;
+    width: 25px;
+    height: 25px;
     display: flex;
-    gap: 10px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    border: 1px solid #111;
+    border-radius: 50%;
+    background: #fff;
+}
+.right div img {
 }
 
 /* Media Query */
 @media screen and (max-width: 992px) {
 }
+
 @media screen and (max-width: 768px) {
-    .nav {
-        display: block;
-    }
-    .nav > ul {
-        padding: 20px 0px;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        width: 100%;
-        background: #ddd;
-    }
     .main {
-        display: block;
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
     }
-}
-@media screen and (min-width: 768px) {
-    .smallDevice {
-        display: none;
+    .search {
+        order: 1;
+        grid-column: 1/-1;
+    }
+    .right {
+        gap: 10px;
+    }
+    .right div {
+        width: 40px;
+        height: 40px;
     }
 }

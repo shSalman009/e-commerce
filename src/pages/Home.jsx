@@ -39,7 +39,7 @@ export default function Home() {
     return (
         <>
             <Topbar />
-            <div style={{ marginTop: "170px" }}>
+            <div style={{ marginTop: "117px" }}>
                 <Slider />
                 <Categories />
                 <Flashsale discountProducts={discountProducts} />

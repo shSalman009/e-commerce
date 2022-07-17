@@ -40,9 +40,6 @@ export default function TopbarTop() {
                                 <li>EUR</li>
                             </ul>
                         </div>
-                        <div className={styles.account}>
-                            <p>login / register</p>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -5,7 +5,6 @@ export default function CartItemPage() {
     return (
         <>
             <Topbar />
-
             <CartPage />
         </>
     );

@@ -1,4 +1,5 @@
-import { Autoplay, Navigation, Pagination } from "swiper";
+import { Link } from "react-scroll";
+import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -16,11 +17,8 @@ export default function Slider() {
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
-                pagination={{
-                    clickable: true,
-                }}
                 navigation={true}
-                modules={[Pagination, Navigation, Autoplay]}
+                modules={[Navigation, Autoplay]}
                 className="mySwiper"
             >
                 {sliderItems.map((item) => (
@@ -31,9 +29,6 @@ export default function Slider() {
                             <div className="container">
                                 <div className={style.main}>
                                     <div className={style.swiperWrapper}>
-                                        {/* <div className={style.sliderImgWrapper}>
-                                            <img src={item.img} alt="" />
-                                        </div> */}
                                         <div
                                             className={
                                                 style.sliderContentWrapper
@@ -42,8 +37,17 @@ export default function Slider() {
                                             <h3>{item.title}</h3>
 
                                             <h4>{item.desc}</h4>
-
-                                            <button>Shop Now</button>
+                                            <button>
+                                                <Link
+                                                    activeClass="active"
+                                                    to="shop"
+                                                    spy={true}
+                                                    smooth={true}
+                                                    duration={500}
+                                                >
+                                                    Shop Now
+                                                </Link>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

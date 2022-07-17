@@ -18,7 +18,9 @@ export default function CartPage() {
             <div className="container">
                 <div className={styles.main}>
                     <div className={styles.cartItems}>
-                        <h3>Shopping Cart</h3>
+                        <div className={styles.head}>
+                            <h3>Shopping Cart</h3>
+                        </div>
 
                         {cartItems && cartItems.length > 0 ? (
                             cartItems.map((item) => (
@@ -26,7 +28,7 @@ export default function CartPage() {
                             ))
                         ) : (
                             <div className={styles.notFound}>
-                                <h4>Cart item is not here</h4>
+                                <h4>Empty Cart</h4>
                             </div>
                         )}
 

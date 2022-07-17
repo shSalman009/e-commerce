@@ -26,11 +26,12 @@
 }
 .right > div {
     padding: 10px;
+    user-select: none;
+}
+.right > div p {
+    cursor: pointer;
 }
 .language {
-    border-right: 1px solid #777;
-}
-.currency {
     border-right: 1px solid #777;
 }
 .account {
@@ -56,6 +57,7 @@
     border-radius: 2px;
     border-top: 3px solid tomato;
     text-align: center;
+    z-index: 999;
     transition: 0.3s ease-in-out;
 }
 .language ul li,

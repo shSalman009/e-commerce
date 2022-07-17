@@ -28,11 +28,12 @@ export default function Footer() {
                 <div className={styles.main}>
                     <div className={styles.items}>
                         <div className={styles.socialLinks}>
-                            <h4>E-Learning</h4>
+                            <h4>E-Commerce</h4>
                             <p>
-                                We are providing high-quality online courses to
-                                improve your skill. Our all instructors are
-                                highly experienced and experts on self fields.
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Dolores reprehenderit rem
+                                numquam ea explicabo adipisci quae facere, nihil
+                                saepe eos!
                             </p>
                             <h5>Follow Us</h5>
                             <div className={styles.links}>
@@ -73,25 +74,6 @@ export default function Footer() {
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        <div className={styles.categories}>
-                            <h4>Browse Categoies</h4>
-                            {/* {categories.map((category) => (
-                                <div
-                                    key={category.id}
-                                    className={styles.cateItem}
-                                >
-                                    <MdPlayArrow />{" "}
-                                    <Link
-                                        to="/courses"
-                                        state={{
-                                            category: category.category,
-                                        }}
-                                    >
-                                        <p>{category.category}</p>
-                                    </Link>
-                                </div>
-                            ))} */}
                         </div>
                         <div className={styles.contacts}>
                             <h4>Connect With Us</h4>
@@ -135,7 +117,7 @@ export default function Footer() {
                 </div>
                 <div className={styles.copyright}>
                     <p>
-                        Copyright © 2021 Shah Salman Ahmed All Rights Reserved.
+                        Copyright © 2022 Shah Salman Ahmed All Rights Reserved.
                         Designed by
                     </p>
                     <a

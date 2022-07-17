@@ -1,6 +1,6 @@
 import style from "../styles/DateDisplay.module.css";
 
-const DateTimeDisplay = ({ value, type, isDanger }) => {
+const DateTimeDisplay = ({ value, type }) => {
     return (
         <div className={style.countdown}>
             <p>{value}</p>

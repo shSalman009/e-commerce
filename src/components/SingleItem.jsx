@@ -58,99 +58,100 @@ export default function SingleItem() {
     };
 
     return (
-        <div className={style.singleItem}>
-            <div className={style.left}>
-                <Swiper
-                    style={{
-                        "--swiper-pagination-color": "#fff",
-                        marginBottom: "20px",
-                    }}
-                    spaceBetween={10}
-                    thumbs={{ swiper: thumbsSwiper }}
-                    modules={[FreeMode, Thumbs]}
-                    className="mySwiper2"
-                >
-                    {item.img.map((e, i) => {
-                        return (
-                            <SwiperSlide key={i}>
-                                <div
-                                    onMouseMove={(e) => {
-                                        handleMouseMove(e);
-                                    }}
-                                    style={{
-                                        backgroundImage: `url(${e})`,
-                                        backgroundPosition,
-                                    }}
-                                    className={style.mainImg}
-                                >
-                                    <img src={e} alt="" />
-                                </div>
-                            </SwiperSlide>
-                        );
-                    })}
-                </Swiper>
-                <Swiper
-                    onSwiper={setThumbsSwiper}
-                    spaceBetween={10}
-                    slidesPerView={3}
-                    freeMode={true}
-                    watchSlidesProgress={true}
-                    modules={[FreeMode, Navigation, Thumbs]}
-                    className="mySwiper"
-                >
-                    {item.img.map((e, i) => (
-                        <SwiperSlide key={i} style={{ cursor: "pointer" }}>
-                            <img src={e} alt="" />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
-
-            <div className={style.right}>
-                <h4 className={style.title}>{item.title}</h4>
-                <h4 className={style.price}>Price : ${item.price}.00</h4>
-                {item.color.length > 0 && (
-                    <div className={style.colors}>
-                        <h4>Availible Color</h4>
-                        <div>
-                            {item.color.map((e, i) => (
-                                <p
-                                    onClick={handleColor}
-                                    key={i}
-                                    style={{ background: e }}
-                                ></p>
-                            ))}
-                        </div>
-                    </div>
-                )}
-                {item.size.length > 0 && (
-                    <div className={style.sizes}>
-                        <h4>Availible Sizes</h4>
-                        <div>
-                            {item.size.map((e, i) => (
-                                <div onClick={handleSize} key={i}>
-                                    {e}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
-
-                <div className={style.addToCart}>
-                    <div className={style.counter}>
-                        <button onClick={handleDecrement}>-</button>
-                        <button>{cartItem}</button>
-                        <button onClick={handleIncrement}>+</button>
-                    </div>
-                    <button
-                        className={cartItem <= 0 ? "disableButton" : "btn"}
-                        onClick={() => {
-                            handleAddCart(item, cartItem);
-                            setCartItem(0);
+        <div className="container">
+            <div className={style.singleItem}>
+                <div className={style.left}>
+                    <Swiper
+                        style={{
+                            "--swiper-pagination-color": "#fff",
+                            marginBottom: "20px",
                         }}
+                        spaceBetween={10}
+                        thumbs={{ swiper: thumbsSwiper }}
+                        modules={[FreeMode, Thumbs]}
+                        className="mySwiper2"
                     >
-                        add to cart
-                    </button>
+                        {item.img.map((e, i) => {
+                            return (
+                                <SwiperSlide key={i}>
+                                    <div
+                                        onMouseMove={(e) => {
+                                            handleMouseMove(e);
+                                        }}
+                                        style={{
+                                            backgroundImage: `url(${e})`,
+                                            backgroundPosition,
+                                        }}
+                                        className={style.mainImg}
+                                    >
+                                        <img src={e} alt="" />
+                                    </div>
+                                </SwiperSlide>
+                            );
+                        })}
+                    </Swiper>
+                    <Swiper
+                        onSwiper={setThumbsSwiper}
+                        spaceBetween={10}
+                        slidesPerView={3}
+                        freeMode={true}
+                        watchSlidesProgress={true}
+                        modules={[FreeMode, Navigation, Thumbs]}
+                        className="mySwiper"
+                    >
+                        {item.img.map((e, i) => (
+                            <SwiperSlide key={i} style={{ cursor: "pointer" }}>
+                                <img src={e} alt="" />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+                <div className={style.right}>
+                    <h4 className={style.title}>{item.title}</h4>
+                    <h4 className={style.price}>Price : ${item.price}.00</h4>
+                    {item.color.length > 0 && (
+                        <div className={style.colors}>
+                            <h4>Availible Color</h4>
+                            <div>
+                                {item.color.map((e, i) => (
+                                    <p
+                                        onClick={handleColor}
+                                        key={i}
+                                        style={{ background: e }}
+                                    ></p>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                    {item.size.length > 0 && (
+                        <div className={style.sizes}>
+                            <h4>Availible Sizes</h4>
+                            <div>
+                                {item.size.map((e, i) => (
+                                    <div onClick={handleSize} key={i}>
+                                        {e}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    <div className={style.addToCart}>
+                        <div className={style.counter}>
+                            <button onClick={handleDecrement}>-</button>
+                            <button>{cartItem}</button>
+                            <button onClick={handleIncrement}>+</button>
+                        </div>
+                        <button
+                            className={cartItem <= 0 ? "disableButton" : "btn"}
+                            onClick={() => {
+                                handleAddCart(item, cartItem);
+                                setCartItem(0);
+                            }}
+                        >
+                            add to cart
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

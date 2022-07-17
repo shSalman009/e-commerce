@@ -19,15 +19,15 @@ export default function CartDetails({ totalPrice, cartItems }) {
                 <div className={styles.options}>
                     <div className={styles.div}>
                         <label>Free Shipping</label>
-                        <input type="radio" />
+                        <input name="shipping" type="radio" />
                     </div>
                     <div className={styles.div}>
                         <label>Flat Rate</label>
-                        <input type="radio" />
+                        <input name="shipping" type="radio" />
                     </div>
                     <div className={styles.div}>
                         <label>Pickup Rate</label>
-                        <input type="radio" />
+                        <input name="shipping" type="radio" />
                     </div>
                 </div>
             </div>

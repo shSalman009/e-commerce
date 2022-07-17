@@ -1,15 +1,9 @@
-.sliderImgWrapper {
-    width: 100%;
-}
-.sliderImgWrapper img {
-    max-width: 100% !important;
-}
 .sliderContentWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 500px;
+    height: 100%;
     flex-direction: column;
     gap: 20px;
 }
@@ -55,5 +49,23 @@
 @media (max-width: 992px) {
     .main {
         height: 350px;
+    }
+}
+@media (max-width: 768px) {
+    .sliderContentWrapper h3 {
+        font-size: 25px;
+        margin-top: 50px;
+    }
+    .sliderContentWrapper h4 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 450px) {
+    .sliderContentWrapper h3 {
+        font-size: 22px;
+        margin-top: 50px;
+    }
+    .sliderContentWrapper h4 {
+        font-size: 15px;
     }
 }
