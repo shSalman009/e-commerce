@@ -27,9 +27,25 @@
     flex: 1;
     display: flex;
     justify-content: center;
+    position: relative;
     align-items: center;
 }
-
+.suggestions {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+.suggestions div {
+    padding: 10px 5px;
+    transition: 0.3s;
+}
+.suggestions div:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
 /* Right */
 .right {
     flex: 1;
